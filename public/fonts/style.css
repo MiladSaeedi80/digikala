@@ -1,0 +1,5 @@
+$font-dir: "/fonts/";
+@font-face {
+    font-family: IRANSans;
+    src: url("#{$font-dir}NameFontRegular/NameFontRegular.woff");
+}
