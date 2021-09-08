@@ -21,7 +21,7 @@
                 <!-- Slides -->
                 <div class="swiper-slide text-center" v-for="(item, index) in sliderHeader" :key="index">
                   <img
-                      :src="item.src"
+                      :src="item"
                       class="img-fluid image-slider"
                       alt="image-slider"
                       loading="lazy"
@@ -76,7 +76,7 @@
       <div class="row">
         <div class="col-lg-3 col-6 hide-poster-product" v-for="(value, index) in posters" :key="index">
           <div>
-            <img :src="value.poster" class="img-fluid poster-product" alt="poster-product" loading="lazy">
+            <img :src="value" class="img-fluid poster-product" alt="poster-product" loading="lazy">
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
       <div class="row">
         <div class="col-lg-6" v-for="(item, index) in serviceBanner" :key="index">
           <div class="banner-service mt-4">
-            <img :src="item.banner" class="img-fluid w-100 h-auto" alt="بنر" loading="lazy">
+            <img :src="item" class="img-fluid w-100 h-auto" alt="بنر" loading="lazy">
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
         <hr class="mb-2">
         <div class="col-6 p-0" v-for="(item, index) in mobilePosterProduct" :key="index">
           <div class=" mt-2 poster-product-discont">
-            <img :src="item.src" class="img-fluid" alt="پوستر محصولات">
+            <img :src="item" class="img-fluid" alt="پوستر محصولات">
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@
     <section class="container mt-3 pt-1">
       <div class="row">
         <div class="col-lg-6" v-for="(value, index) in serviceBanner2" :key="index">
-          <img :src="value.banner" class="img-fluid poster-product" alt="poster-product" loading="lazy">
+          <img :src="value" class="img-fluid poster-product" alt="poster-product" loading="lazy">
         </div>
       </div>
     </section>
@@ -178,15 +178,11 @@
 
     <!--slider-special-brands-->
     <SliderSpecialBrands/>
-
-
     <!--slider-selected-product-->
     <SliderSelectedProducts/>
 
-
-
     <!--footer-->
-    <Footer/>
+    <ComponentFooter/>
   </div>
 </template>
 
@@ -201,7 +197,7 @@ import SliderBag from '@/components/SliderBag'
 import SliderProductBook from '@/components/SliderProductBook'
 import SliderSpecialBrands from '@/components/SliderSpecialBrands'
 import SliderSelectedProducts from '@/components/SliderSelectedProducts'
-import Footer from '@/components/Footer'
+import ComponentFooter from '@/components/ComponentFooter'
 
 import 'swiper/swiper-bundle.css';
 import { Swiper, Pagination, Navigation, Autoplay } from "swiper";
@@ -212,22 +208,22 @@ export default {
     return {
       slider_bannder:null,
       sliderHeader : [
-        {src : require(`@/assets/image/image-slider1.jpg`)},
-        {src : require(`@/assets/image/image-slider2.gif`)},
-        {src : require(`@/assets/image/image-slider3.jpg`)},
-        {src : require(`@/assets/image/image-slider4.jpg`)}
+        require(`@/assets/image/image-slider1.jpg`),
+        require(`@/assets/image/image-slider2.gif`),
+        require(`@/assets/image/image-slider3.jpg`),
+        require(`@/assets/image/image-slider4.jpg`)
       ],
 
       posters : [
-        {poster : require(`@/assets/image/poster1.jpg`)},
-        {poster : require(`@/assets/image/poster2.jpg`)},
-        {poster : require(`@/assets/image/poster3.jpg`)},
-        {poster : require(`@/assets/image/poster4.jpg`)},
+        require(`@/assets/image/poster1.jpg`),
+        require(`@/assets/image/poster2.jpg`),
+        require(`@/assets/image/poster3.jpg`),
+        require(`@/assets/image/poster4.jpg`),
       ],
 
       serviceBanner : [
-        {banner : require(`@/assets/image/service-banner.jpg`)},
-        {banner : require(`@/assets/image/service-banner2.jpg`)},
+        require(`@/assets/image/service-banner.jpg`),
+        require(`@/assets/image/service-banner2.jpg`),
       ],
 
       iconDifferentKala : [
@@ -244,15 +240,15 @@ export default {
       ],
 
       servicePoster : [
-        {banner : require(`@/assets/image/service-banner5.jpg`)},
-        {banner : require(`@/assets/image/service-banner6.jpg`)},
-        {banner : require(`@/assets/image/service-banner7.jpg`)},
-        {banner : require(`@/assets/image/service-banner8.jpg`)},
+        require(`@/assets/image/service-banner5.jpg`),
+        require(`@/assets/image/service-banner6.jpg`),
+        require(`@/assets/image/service-banner7.jpg`),
+        require(`@/assets/image/service-banner8.jpg`),
       ],
 
       serviceBanner2 : [
-        {banner : require(`@/assets/image/service-banner9.jpg`)},
-        {banner : require(`@/assets/image/service-banner10.jpg`)},
+        require(`@/assets/image/service-banner9.jpg`),
+        require(`@/assets/image/service-banner10.jpg`),
       ],
 
       iconFooter: [
@@ -267,10 +263,10 @@ export default {
       ],
 
       mobilePosterProduct : [
-        {src : require(`@/assets/image/service-banner5.jpg`)},
-        {src : require(`@/assets/image/service-banner6.jpg`)},
-        {src : require(`@/assets/image/service-banner7.jpg`)},
-        {src : require(`@/assets/image/service-banner8.jpg`)}
+        require(`@/assets/image/service-banner5.jpg`),
+        require(`@/assets/image/service-banner6.jpg`),
+        require(`@/assets/image/service-banner7.jpg`),
+        require(`@/assets/image/service-banner8.jpg`)
       ]
     }
   },
@@ -285,7 +281,7 @@ export default {
     SliderProductBook,
     SliderSpecialBrands,
     SliderSelectedProducts,
-    Footer,
+    ComponentFooter,
     MobileNavBar
     },
 

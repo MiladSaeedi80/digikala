@@ -236,7 +236,7 @@ export default {
   line-height: 25px;
 }
 
-.box-SideBar-login .login-digikala {;
+.box-SideBar-login .login-digikala {
   padding: .8rem 1rem;
   font-size: .9em;
   font-weight: 700;

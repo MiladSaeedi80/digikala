@@ -108,7 +108,7 @@
                 <div class="col-6 p-0" v-for="(item, index) in mobileApplicationDownload" :key="index">
                   <div class="mt-3 box-img-download">
                     <a href="#">
-                      <img :src="item.src" class="img-fluid" alt="دریافت از دیچی کالا" loading="lazy">
+                      <img :src="item" class="img-fluid" alt="دریافت از دیچی کالا" loading="lazy">
                     </a>
                   </div>
                 </div>
@@ -150,7 +150,7 @@
             <ul class="d-flex partners p-0 m-0">
               <li v-for="(item, index) in partners" :key="index">
                 <a href="#">
-                  <img :src="item.src" class="img-partners" alt="" loading="lazy">
+                  <img :src="item" class="img-partners" alt="" loading="lazy">
                 </a>
               </li>
             </ul>
@@ -177,25 +177,25 @@ export default {
       ],
 
       partners : [
-        {src : require(`@/assets/image/ea7f1514.svg`)},
-        {src : require(`@/assets/image/2a7efb04.svg`)},
-        {src : require(`@/assets/image/76d0ad0e.svg`)},
-        {src : require(`@/assets/image/4e4213a7.svg`)},
-        {src : require(`@/assets/image/a0e67dd7.svg`)},
-        {src : require(`@/assets/image/d460e183.svg`)},
-        {src : require(`@/assets/image/7069844a.svg`)},
-        {src : require(`@/assets/image/dff36048.svg`)},
-        {src : require(`@/assets/image/a3985b44.svg`)},
-        {src : require(`@/assets/image/eca9dab5.svg`)},
-        {src : require(`@/assets/image/eca9dab5.svg`)},
-        {src : require(`@/assets/image/b7bd862f.svg`)}
+        require(`@/assets/image/ea7f1514.svg`),
+        require(`@/assets/image/2a7efb04.svg`),
+        require(`@/assets/image/76d0ad0e.svg`),
+        require(`@/assets/image/4e4213a7.svg`),
+        require(`@/assets/image/a0e67dd7.svg`),
+        require(`@/assets/image/d460e183.svg`),
+        require(`@/assets/image/7069844a.svg`),
+        require(`@/assets/image/dff36048.svg`),
+        require(`@/assets/image/a3985b44.svg`),
+        require(`@/assets/image/eca9dab5.svg`),
+        require(`@/assets/image/eca9dab5.svg`),
+        require(`@/assets/image/b7bd862f.svg`)
       ],
 
       mobileApplicationDownload : [
-        {src : require(`@/assets/image/dd753f51.png`)},
-        {src : require(`@/assets/image/f822b108 (1).svg`)},
-        {src : require(`@/assets/image/692fd5db.svg`)},
-        {src : require(`@/assets/image/c4abfc14.png`)},
+        require(`@/assets/image/dd753f51.png`),
+        require(`@/assets/image/f822b108 (1).svg`),
+        require(`@/assets/image/692fd5db.svg`),
+        require(`@/assets/image/c4abfc14.png`),
       ]
     }
   }

@@ -13,7 +13,7 @@
                 <div class="swiper-slide text-center" v-for="(item, index) in informationProduct" :key="index">
                   <div class="card">
                     <img
-                        :src="item.src"
+                        :src="item"
                         class="img-fluid image-slider mx-auto"
                         alt="image-slider"
                         loading="lazy"
@@ -33,7 +33,7 @@
   </div>
 
 </template>
-
+require(`@/assets/image/product-brands.jpg`),
 <script>
 import 'swiper/swiper-bundle.css';
 import { Swiper, Pagination, Navigation} from "swiper";Swiper.use([Pagination, Navigation]);
@@ -41,30 +41,14 @@ export default {
   data() {
     return {
       informationProduct : [
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
-        {
-          src : require(`@/assets/image/product-brands.jpg`),
-        },
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
+        require(`@/assets/image/product-brands.jpg`),
       ],
 
       slider_bannder2:null,

@@ -23,15 +23,15 @@
     </div>
 
     <!--Nav-->
-    <Nav/>
+    <ComponentNav/>
   </section>
 </template>
 
 <script>
-import Nav from '@/components/nav'
+import ComponentNav from '@/components/ComponentNav'
 export default {
   components : {
-    Nav
+    ComponentNav
   }
 }
 </script>
