@@ -11,7 +11,7 @@
 
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide text-center" v-for="(item, index) in informationProduct" :key="index">
+                <div class="swiper-slide text-center" v-for="(item, index) in informationProductBook" :key="index">
                   <div class="card">
                     <img
                         :src="item.src"
@@ -46,67 +46,19 @@
 <script>
 import 'swiper/swiper-bundle.css';
 import { Swiper, Pagination, Navigation} from "swiper";Swiper.use([Pagination, Navigation]);
+
+
 export default {
+  props: {
+    informationProductBook:{
+      type: [Array, undefined],
+      default: function (){
+        return []
+      }
+    }
+  },
   data() {
     return {
-      informationProduct : [
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-        {
-          src : require(`@/assets/image/product-book.jpg`),
-          title : 'کتاب چهار اثر از فلورانس اسکاول شین اثر فلورانس اسکاول شین انتشارات نگین ایران',
-          discont : '83%',
-          price : '75.000',
-          orginalPrice : '12.500 تومان'
-        },
-      ],
       slider_bannder2:null,
       infromationProducts: [
         {

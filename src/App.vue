@@ -2,6 +2,12 @@
     <router-view class="parent"/>
 </template>
 
+<script>
+
+export default {
+
+}
+</script>
 
 <style>
 

@@ -17,7 +17,7 @@
 
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide text-center" v-for="(item, index) in informationProduct" :key="index">
+                <div class="swiper-slide text-center" v-for="(item, index) in informationProductSlider2" :key="index">
                   <div class="card">
                     <img
                         :src="item.src"
@@ -70,7 +70,7 @@
 
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide text-center" v-for="(item, index) in informationProduct" :key="index">
+                <div class="swiper-slide text-center" v-for="(item, index) in informationProductSlider2" :key="index">
                   <div class="card">
                     <img
                         :src="item.src"
@@ -108,74 +108,83 @@ import 'swiper/swiper-bundle.css';
 import { Swiper, Pagination, Navigation} from "swiper";
 Swiper.use([Pagination, Navigation]);
 export default {
+  props: {
+    informationProductSlider2: {
+      type: [Array , undefined],
+      default : function () {
+        return []
+      }
+    }
+  },
   data() {
     return {
-      informationProduct : [
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discont : '26%',
-          price : '1.66.300',
-          orginalPrice : '859,000 تومان'
-        },
-      ],
+
+      // informationProduct : [
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
+      //     title : '-macro-bahareh-سایز-170-130-سانتی-متر',
+      //     gift : '۷,۴۰۰ تومان هدیه نقدی',
+      //     discont : '26%',
+      //     price : '1.66.300',
+      //     orginalPrice : '859,000 تومان'
+      //   },
+      // ],
       slider_bannder2:null,
       infromationProducts: [
         {

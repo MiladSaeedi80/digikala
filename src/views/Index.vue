@@ -1,10 +1,10 @@
-<template>
+<template dir="rtl">
   <div id="app">
 
     <MobileNavBar/>
 
     <!--banner-header-->
-    <img :src="require('@/assets/image/poster-top.jpg')" class="w-100 h-100 img-fluid" id="bannerNavbar" loading="lazy">
+    <img :src="require('@/assets/image/poster-top.jpg')" class="w-100 h-100 img-fluid" id="bannerNavbar" loading="lazy" alt="">
 
     <!--navbar-->
     <NavBar/>
@@ -19,7 +19,7 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide text-center" v-for="(item, index) in sliderHeader" :key="index">
+                <div class="swiper-slide text-center" v-for="(item, index) in posts.sliderHeader" :key="index">
                   <img
                       :src="item"
                       class="img-fluid image-slider"
@@ -45,7 +45,7 @@
     </div>
 
     <!--slider-product-owe-->
-    <Slider2/>
+    <Slider2 :informationProductSlider2="posts.informationProductSlider2"/>
 
     <!--features-kala-->
     <section class="container-fluid">
@@ -141,7 +141,7 @@
     </section>
 
     <!--slider-product-book-->
-    <SliderProductBook/>
+    <SliderProductBook :informationProductBook="posts.informationProductBook"/>
 
     <!--features-kala-->
     <section class="container-fluid ">
@@ -207,12 +207,7 @@ export default {
   data() {
     return {
       slider_bannder:null,
-      sliderHeader : [
-        require(`@/assets/image/image-slider1.jpg`),
-        require(`@/assets/image/image-slider2.gif`),
-        require(`@/assets/image/image-slider3.jpg`),
-        require(`@/assets/image/image-slider4.jpg`)
-      ],
+
 
       posters : [
         require(`@/assets/image/poster1.jpg`),
@@ -312,9 +307,14 @@ export default {
       });
     },
   },
+  created() {
+    this.$store.dispatch('getPosts')
+  },
 
-  mounted(){
-    this.initSliderBanner()
+  computed : {
+    posts() {
+      return this.$store.getters.posts
+    }
   }
 }
 </script>
