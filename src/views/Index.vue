@@ -83,7 +83,7 @@
     </section>
 
     <!--slider-product-two-->
-    <SliderMarket/>
+    <SliderMarket :informaionSliderMarket = "posts.informaionSliderMarket"/>
 
     <!--service-banner-->
     <section class="container">

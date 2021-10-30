@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="col-lg-10 col-7">
-            <div class="swiper-container slider-banner2">
+            <div class="swiper-container slider2">
               <!-- Additional required wrapper -->
 
               <div class="swiper-wrapper">
@@ -49,56 +49,56 @@
 
 
 
-    <div class="container-fluid slider-product p-0 mt-2 d-none show-mobile-slider2">
-      <section class="container p-0">
-        <div class="row m-0">
-          <div class="col-lg-12 col-12">
-            <div class="swiper-container d-flex slider-banner2">
-              <!-- Additional required wrapper -->
+<!--    <div class="container-fluid slider-product p-0 mt-2 d-none show-mobile-slider2">-->
+<!--      <section class="container p-0">-->
+<!--        <div class="row m-0">-->
+<!--          <div class="col-lg-12 col-12">-->
+<!--            <div class="swiper-container d-flex slider-banner2">-->
+<!--              &lt;!&ndash; Additional required wrapper &ndash;&gt;-->
 
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide text-center slide-incredible">
-                    <div class="image-incredible">
-                      <img :src="require('@/assets/image/63494995.png')" class="img-fluid" alt="image-slider" loading="lazy">
-                      <div>
-                        <a href="#" class="font-awesome-icons">مشاهده همه</a>
-                      </div>
-                  </div>
-                </div>
-              </div>
+<!--              <div class="swiper-wrapper">-->
+<!--                &lt;!&ndash; Slides &ndash;&gt;-->
+<!--                <div class="swiper-slide text-center slide-incredible">-->
+<!--                    <div class="image-incredible">-->
+<!--                      <img :src="require('@/assets/image/63494995.png')" class="img-fluid" alt="image-slider" loading="lazy">-->
+<!--                      <div>-->
+<!--                        <a href="#" class="font-awesome-icons">مشاهده همه</a>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
 
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide text-center" v-for="(item, index) in informationProductSlider2" :key="index">
-                  <div class="card">
-                    <img
-                        :src="item.src"
-                        class="img-fluid image-slider mx-auto"
-                        alt="image-slider"
-                        loading="lazy"
-                    />
-                    <div class="information-product">
-                      <h6>{{ item.title }}</h6>
-                      <span>{{ item.gift }}</span>
-                    </div>
-                    <div class="information-price-product">
-                      <span>{{ item.discont }}</span>
-                      <sub>{{ item.price }}</sub>
-                      <h6 class="mt-3">{{ item.orginalPrice }}</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<!--              <div class="swiper-wrapper">-->
+<!--                &lt;!&ndash; Slides &ndash;&gt;-->
+<!--                <div class="swiper-slide text-center" v-for="(item, index) in informationProductSlider2" :key="index">-->
+<!--                  <div class="card">-->
+<!--                    <img-->
+<!--                        :src="item.src"-->
+<!--                        class="img-fluid image-slider mx-auto"-->
+<!--                        alt="image-slider"-->
+<!--                        loading="lazy"-->
+<!--                    />-->
+<!--                    <div class="information-product">-->
+<!--                      <h6>{{ item.title }}</h6>-->
+<!--                      <span>{{ item.gift }}</span>-->
+<!--                    </div>-->
+<!--                    <div class="information-price-product">-->
+<!--                      <span>{{ item.discont }}</span>-->
+<!--                      <sub>{{ item.price }}</sub>-->
+<!--                      <h6 class="mt-3">{{ item.orginalPrice }}</h6>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
 
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+<!--              &lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
+<!--              <div class="swiper-button-prev"></div>-->
+<!--              <div class="swiper-button-next"></div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--    </div>-->
   </div>
 
 </template>
@@ -107,15 +107,18 @@
 import 'swiper/swiper-bundle.css';
 import { Swiper, Pagination, Navigation} from "swiper";
 Swiper.use([Pagination, Navigation]);
+
 export default {
-  props: {
-    informationProductSlider2: {
-      type: [Array , undefined],
-      default : function () {
-        return []
-      }
-    }
-  },
+
+   props: {
+     informationProductSlider2: {
+       type: [Array , undefined],
+       default : function () {
+         return []
+       }
+     },
+   },
+
   data() {
     return {
 
@@ -185,27 +188,16 @@ export default {
       //     orginalPrice : '859,000 تومان'
       //   },
       // ],
-      slider_bannder2:null,
-      infromationProducts: [
-        {
-          src : require(`@/assets/image/4ed2a95869b2ed3150fd9b9f294d37cf9b4a1294_1615795221.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discount : '26%',
-          price : '1.66.300,',
-          orginalPrice : '859,000 تومان'
-        }
-      ]
-
+      slider_bannder3:null,
     }
   },
   methods: {
     initSliderBanner() {
-      this.slider_bannder2 = new Swiper(".slider-banner2", {
+      this.slider_bannder3 = new Swiper(".slider2", {
         slidesPerView: 1,
         pagination: {
           clickable: true,
-          el: ".slider-banner2 .swiper-pagination"
+          el: ".slider2 .swiper-pagination"
         },
 
         breakpoints : {
@@ -217,14 +209,19 @@ export default {
 
         // Navigation arrows
         navigation: {
-          nextEl: ".slider-banner2 .swiper-button-next",
-          prevEl: ".slider-banner2 .swiper-button-prev"
+          nextEl: ".slider2 .swiper-button-next",
+          prevEl: ".slider2 .swiper-button-prev"
         },
       });
     },
   },
-  mounted(){
-    this.initSliderBanner()
+
+  watch: {
+    informationProductSlider2() {
+      this.$nextTick(()=>{
+        this.initSliderBanner()
+      })
+    }
   }
 }
 </script>

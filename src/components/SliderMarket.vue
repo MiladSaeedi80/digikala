@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="col-lg-10">
-            <div class="swiper-container slider-banner2">
+            <div class="swiper-container slider-banner3">
               <!-- Additional required wrapper -->
 
               <div class="swiper-wrapper">
@@ -102,95 +102,94 @@
 import 'swiper/swiper-bundle.css';
 import { Swiper, Pagination, Navigation} from "swiper";Swiper.use([Pagination, Navigation]);
 export default {
+
+
+  props : {
+    informaionSliderMarket: {
+      type : [Array , undefined],
+      default: function () {
+        return []
+      }
+    }
+  },
   data() {
     return {
-      informaionSliderMarket : [
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
-          gift : '۱,۳۰۰ تومان هدیه نقدی',
-          discont : '۱۴٪',
-          price : '۴۶,۵۰۰',
-          orginalPrice : '۳۹,۹۰۰ تومان'
-        },
-      ],
+      // informaionSliderMarket : [
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      //   {
+      //     src : require(`@/assets/image/image-market1.jpg`),
+      //     title : 'مایع دستشویی کرمی داو مدل Deeply Nourishing حجم 500 میلی لیتر',
+      //     gift : '۱,۳۰۰ تومان هدیه نقدی',
+      //     discont : '۱۴٪',
+      //     price : '۴۶,۵۰۰',
+      //     orginalPrice : '۳۹,۹۰۰ تومان'
+      //   },
+      // ],
       slider_bannder2:null,
-      infromationProducts: [
-        {
-          src : require(`@/assets/image/image-market1.jpg`),
-          title : '-macro-bahareh-سایز-170-130-سانتی-متر',
-          gift : '۷,۴۰۰ تومان هدیه نقدی',
-          discount : '26%',
-          price : '1.66.300,',
-          orginalPrice : '859,000 تومان'
-        }
-      ]
-
     }
   },
   methods: {
     initSliderBanner() {
-      this.slider_bannder2 = new Swiper(".slider-banner2", {
+      this.slider_bannder3 = new Swiper(".slider-banner3", {
         slidesPerView: 1,
         pagination: {
           clickable: true,
-          el: ".slider-banner2 .swiper-pagination"
+          el: ".slider-banner3 .swiper-pagination"
         },
 
         breakpoints : {
@@ -202,14 +201,18 @@ export default {
 
         // Navigation arrows
         navigation: {
-          nextEl: ".slider-banner2 .swiper-button-next",
-          prevEl: ".slider-banner2 .swiper-button-prev"
+          nextEl: ".slider-banner3 .swiper-button-next",
+          prevEl: ".slider-banner3 .swiper-button-prev"
         },
       });
     },
   },
-  mounted(){
-    this.initSliderBanner()
+  watch: {
+    informaionSliderMarket() {
+      this.$nextTick(()=>{
+        this.initSliderBanner()
+      })
+    }
   }
 }
 </script>
